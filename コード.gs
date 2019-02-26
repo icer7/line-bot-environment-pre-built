@@ -5,27 +5,17 @@ function doPost(e) {
  replyToken = webhookData.replyToken;
  switch (message) {
    case '使い方':
-      replyText = '任意の言葉';
-      break;
+    replyText = '任意の言葉';
+    break;
    case 'キャンセル':
-      replyText = '任意の言葉';
-      break;
+    replyText = '任意の言葉';
+    break;
    case '確認':
-     if (todoDate) {
-       replyText = '任意の言葉';
-     } else {
-       replyText = '任意の言葉';
-     }
-     break;
+    replyText = '任意の言葉';
+    break;
    default:
-     if (todoDate) {
-       replyText = '任意の言葉';
-     } else if (todo) {
-       replyText = setDate(userDataRow, message);
-     }
-     else {
-       replyText = setTodo(userDataRow, message);
-     }
+    replyText = '任意の言葉';
+    break;
  }
  return sendLineMessageFromReplyToken(replyToken, replyText);
 }
